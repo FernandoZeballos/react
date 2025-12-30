@@ -33,5 +33,16 @@ describe("MyAwesomeApp", () => {
 
         expect(h1.innerHTML).toContain('Fernando');
     });
+
+    test('should match with snapshot', () => {
+        const { container } = render(<MyAwesomeApp />);
+        expect(container).toMatchSnapshot();
+    });
+
+      test('should match with snapshot', () => {
+        render(<MyAwesomeApp />);
+        expect( screen.getByTestId('div-app') ).toMatchSnapshot();
+    });
+
 });
         
