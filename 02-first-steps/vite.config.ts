@@ -5,8 +5,11 @@ import react from '@vitejs/plugin-react-swc';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  test:{
+  test: {
     environment: 'jsdom',
     globals: true,
+    coverage: {
+      exclude: ['**/*.css'] // Exclude CSS files from coverage
+    }
   }
 })

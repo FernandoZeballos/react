@@ -6,22 +6,22 @@ interface ItemInCart {
 }
 
 const itemInCart: ItemInCart[] = [
-    {productName: 'Nintendo Switch', quantity: 1},
-    {productName: 'Pro controller', quantity: 2},
-    {productName: 'Super Smash', quantity: 5},
+    { productName: 'Nintendo Switch', quantity: 1 },
+    { productName: 'Pro controller', quantity: 2 },
+    { productName: 'Super Smash', quantity: 5 },
 
 ];
 
 
-export function FirstStepsApp() {
+export const FirstStepsApp = () => {
 
     return (
         <>
             <h1>Carrito de compras</h1>
 
             {
-                itemInCart.map( ({productName, quantity}) => (
-                    <ItemCounter key={productName}name={productName} quantity={quantity}/>
+                itemInCart.map(({ productName, quantity }) => (
+                    <ItemCounter key={productName} name={productName} quantity={quantity} />
                 ))
             }
 
@@ -29,7 +29,6 @@ export function FirstStepsApp() {
             <ItemCounter name="Pro controller" quantity={2}/>
             <ItemCounter name="Super Smash" quantity={3}/>
             <ItemCounter name="Super Mario" quantity={3}/> */}
-
         </>
     )
 }
